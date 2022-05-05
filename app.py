@@ -16,7 +16,7 @@ def homepage():
 
 
 
-@app.route('/thrillophilia/activities', methods =['POST','GET'])
+@app.route('/travel/activities', methods =['POST','GET'])
 @cross_origin()
 def deatils():
     search = ['Activity']
