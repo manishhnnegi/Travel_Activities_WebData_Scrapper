@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h2 style="text-align:center">Travel Activities Data Analysis of Thrillophilia.com website </h2>
+
+    <div class="form">
+        <form action="/thrillophilia/activities" method="POST">
+            <!input type="text" name="keyword" id="keyword"  placeholder="Enter the activity name">
+            <select name="keyword" id="keyword" style="text-align:center" >
+                 <option value="no-keyword">select activity name you are looking for! </option>
+                 <option value="trekking">trekking</option>
+                 <option value="adventure">adventure</option>
+                 <option value="camping">camping</option>
+                <option value="wildlife">wildlife</option>
+                <option value="walking">walking</option>
+                 <option value="wildlife">wildlife</option>
+                 <option value="yoga">yoga</option>
+                <option value="cycling">cycling</option>
+                 <option value="tours">tours</option>
+                 <option value="nature">nature</option>
+                <option value="sightseeing">sightseeing</option>
+                 <option value="romantic">romantic</option>
+                 <option value="water">water</option>
+
+              </select><!br>
+
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</div>
+{% endblock %}

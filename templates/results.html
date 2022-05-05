@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Review Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+
+  <div class="table-users">
+   <div class="header">Reviews</div>
+
+   <table cellspacing="1", style="width: 100%">
+      <tr>
+          <th>ACTIVITY</th>
+          <th span="1" style="width: 15%;">ACTIVITY PLACE</th>
+          <th>PRICE per adult(₹)</th>
+         <th>ACTIVITY DAYS</th>
+          <th>VISITOR'S NAME</th>
+         <th>RATING</th>
+         <th span="1" style="width: 40%;">VISITORS PERSONAL REVIEWS</th>
+
+
+
+
+
+
+      <tr>
+          {% for lst in lst %}
+      <tr>
+           <td>{{lst['searchString']}}</td>
+           <td>{{lst['place']}}</td>
+           <td>{{lst['price']}}</td>
+             <td>{{lst['days']}}</td>
+            <td>{{lst['name']}}</td>
+            <td>{{lst['rating']}}</td>
+            <td>{{lst['comment']}}</td>
+
+
+
+
+
+          {% endfor %}
+
+
+   </table>
+</div>
+
+
+
+</body>
+
+</html>
